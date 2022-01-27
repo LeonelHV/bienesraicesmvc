@@ -3,7 +3,7 @@
 function conectarDB(): mysqli
 {
 
-    $db = new mysqli($_ENV['HOST'], $_ENV['USERDB'],$_ENV['PASSWORDDB'], $_ENV['DATABASENAME']);
+    $db = new mysqli(getenv('HOST'), getenv('USERDB'),getenv('PASSWORDDB'), getenv('DATABASENAME'));
     if (!$db) {
         echo "Error no se pudo conectar";
         exit;
