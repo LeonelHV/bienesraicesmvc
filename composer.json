@@ -1,0 +1,23 @@
+{
+    "name": "leonel/bienesraices",
+    "description": "Creando un Proyecto con POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Leonel Claudio Huachaca Velasquez",
+            "email": "leonel.huachacav@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.5",
+        "phpmailer/phpmailer": "^6.4",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\":"./models",
+            "MVC\\":"./",
+            "Controllers\\":"./controllers"
+        }
+    }
+}
