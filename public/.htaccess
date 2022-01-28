@@ -16,10 +16,9 @@
     Require all granted
 </Directory>
 
-ServerName https://bienesraiceslh.herokuapp.com/
-DocumentRoot "/public"
 
-<Directory "/public">
+
+<Directory>
     Require all granted
 
     # When Options is set to "off", then the RewriteRule directive is forbidden!
