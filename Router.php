@@ -26,7 +26,13 @@ class Router
         //Arreglo de rutas Protegidas
         $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
-        $urlActual = $_SERVER['PATH_INFO'] ?? '/';
+        // $urlActual = $_SERVER['PATH_INFO'] ?? '/';
+        $urlActual = $_SERVER['REQUEST_URI'] ?? '/';
+//debuguear($urlActual);
+//debuguear($_SERVER);
+if(strpos($urlActual, '?')){ // tuve que crear este if para que cuando sea un get, tome el redirect y no el request
+     $urlActual = $_SERVER['REDIRECT_URL'];
+}
         $metodo = $_SERVER['REQUEST_METHOD'];
 
         if ($metodo === 'GET') {
