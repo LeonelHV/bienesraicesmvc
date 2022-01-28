@@ -17,7 +17,7 @@
 </Directory>
 
 ServerName https://bienesraiceslh.herokuapp.com/
-DocumentRoot "/path/to/my/sample/mvc/public"
+DocumentRoot "/public"
 
 <Directory "/public">
     Require all granted
